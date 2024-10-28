@@ -26,11 +26,6 @@ constraint forall(l in 1..num_lugares)(
   count(i in 1..num_disciplinas) (lugar[i] == l) <= capacidad_lugar[l]
 );
 
-% Restricción de disponibilidad de los participantes
-constraint forall(p in 1..num_participantes, i, j in 1..num_disciplinas where i != j)(
-  participantes[i] == p /\ participantes[j] == p -> inicio_disciplina[i] + duracion[i] <= inicio_disciplina[j] \/
-  inicio_disciplina[j] + duracion[j] <= inicio_disciplina[i]
-);
 
 % Restricción de capacidad de los lugares
 constraint forall(l in 1..num_lugares)(
