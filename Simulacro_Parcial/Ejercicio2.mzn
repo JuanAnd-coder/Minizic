@@ -16,7 +16,7 @@ volumen = [4, 3, 5, 2, 1];
 tiempo_entrega = [2, 5, 3, 1, 4];
 
 % Prioridad de los productos
-prioridad = [1, 2, 3, 1, 2];
+prioridad = [2, 5, 3, 1, 4];
 
 % Capacidad máxima de las estanterías
 array[1..num_estanterias] of int: capacidad = [8, 6, 5];
